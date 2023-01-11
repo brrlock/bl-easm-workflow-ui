@@ -31,7 +31,7 @@ export const NavBar: React.FunctionComponent<NavBarProps> = (props: NavBarProps,
             'nav-bar--compact': (props.items || []).length >= 10,
         })} style={navBarStyle}>
             <div className='nav-bar__logo'>
-                <img src='assets/images/logo.png' alt='Argo'/>
+                <img src='assets/images/logo.svg' alt='Argo'/>
                 <div className='nav-bar__version'>{props.version && props.version()}</div>
                 {(props.items || []).map((item) => (
                     <Tooltip content={item.title} placement='right' arrow={true} key={item.path + item.title}>

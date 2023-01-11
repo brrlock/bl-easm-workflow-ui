@@ -1,6 +1,6 @@
 # Argo UI Components
 
-<img src="https://github.com/argoproj/argo-ui/blob/master/src/assets/images/logo.png?raw=true" alt="Argo Image" height="200px">
+<img src="https://github.com/argoproj/argo-ui/blob/master/src/assets/images/logo.svg?raw=true" alt="Argo Image" height="200px">
 
 Set of React components used by https://github.com/argoproj/argo and https://github.com/argoproj/argo-cd
 
