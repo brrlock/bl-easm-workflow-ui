@@ -20,7 +20,7 @@ export interface PageContextProps {
     title: string;
 }
 
-export const PageContext = React.createContext<PageContextProps>({ title: 'Argo' });
+export const PageContext = React.createContext<PageContextProps>({ title: 'Breachlock' });
 
 export const Page = (props: PageProps) => {
     const toolbarObservable = props.toolbar && Utils.toObservable(props.toolbar);
