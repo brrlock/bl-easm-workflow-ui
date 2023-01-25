@@ -25,6 +25,8 @@ export const PageContext = React.createContext<PageContextProps>({ title: 'Breac
 export const Page = (props: PageProps) => {
     const toolbarObservable = props.toolbar && Utils.toObservable(props.toolbar);
 
+    console.log("props", props)
+
     return (
         <div className={classNames('page', { 'page--has-toolbar': !!props.toolbar })}>
             <React.Fragment>
@@ -34,6 +36,8 @@ export const Page = (props: PageProps) => {
                         <PageContext.Consumer>
                             {(ctx) => {
                                 let titleParts = [ctx.title];
+                                console.log("ctx title parts", ctx.title)
+                                console.log("toolbar breadcrumps", toolbar.breadcrumbs)
                                 if (!props.useTitleOnly && toolbar && toolbar.breadcrumbs && toolbar.breadcrumbs.length > 0) {
                                     titleParts = [toolbar.breadcrumbs.map((item) => item.title).reverse().join(' / ')].concat(titleParts);
                                 } else if (props.title) {
@@ -41,6 +45,7 @@ export const Page = (props: PageProps) => {
                                 }
                                 return (
                                     <Helmet>
+                                        {console.log("title check: ",titleParts)}
                                         <title>{titleParts.join(' - ')}</title>
                                     </Helmet>
                                 );
